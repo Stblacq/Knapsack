@@ -1,0 +1,26 @@
+<VirtualHost *:80>
+		ServerName  161.35.78.251
+		ServerAdmin webmaster@localhost
+
+		
+                         #path to static
+        Alias /static /root/local/git-django/src/static
+        <Directory "/root/local/git-django/src/static">
+                Require all granted
+        </Directory>
+            
+            #path to wsgi
+          <Directory /root/local/git-django/src>
+                <Files wsgi.py>
+                        Require all granted
+                </Files>
+        </Directory>
+        WSGIScriptAlias / /root/local/git-django/src/wsgi.py
+                                       #path to manage.py                      #path to venv
+        WSGIDaemonProcess git_django   python-path=/root/local/git-django/src python-home=/root/local/git-django/venv
+        WSGIProcessGroup git_django
+
+      
+		
+		
+</VirtualHost>
