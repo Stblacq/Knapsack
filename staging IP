@@ -1,0 +1,1 @@
+ssh -i .ssh/TplusStagingKP.pem ubuntu@3.121.214.15
