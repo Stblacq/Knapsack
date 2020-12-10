@@ -1,1 +1,3 @@
 ssh -i .ssh/TplusStagingKP.pem ubuntu@3.121.214.15
+
+ssh ubuntu@3.83.223.79 -i  ~/.ssh/tradefiKeyPair.pem
